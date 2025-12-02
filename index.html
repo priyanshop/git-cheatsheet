@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Git Command Cheatsheet</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Inter", sans-serif;
+        background: radial-gradient(circle at top, #111 10%, #000 80%);
+        color: white;
+        overflow-x: hidden;
+    }
+
+    .header {
+        text-align: center;
+        padding: 40px 10px;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        color: #8deaff;
+        text-shadow: 0 0 12px rgba(141,234,255,.8);
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        gap: 25px;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 60px;
+    }
+
+    .card {
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        background: rgba(255, 255, 255, 0.08);
+        padding: 22px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+        transition: transform 0.18s ease-in-out, box-shadow .2s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.16);
+    }
+
+    .cmd-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #91f2ff;
+        margin-bottom: 8px;
+    }
+
+    .cmd {
+        font-family: monospace;
+        font-size: 16px;
+        background: rgba(0, 0, 0, 0.35);
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 7px;
+        border: 1px solid rgba(255,255,255,0.08);
+        margin: 5px 0;
+        color: #e1feff;
+    }
+
+    .example {
+        font-size: 15px;
+        color: #ccc;
+        margin-top: 6px;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">⚡ Git Command Cheatsheet</div>
+
+<div class="container">
+
+    <div class="card">
+        <div class="cmd-title">Initialize Repository</div>
+        <div class="cmd">git init</div>
+        <div class="example">Creates a new git repository in current folder</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Clone Repository</div>
+        <div class="cmd">git clone &lt;url&gt;</div>
+        <div class="example">git clone https://github.com/user/repo.git</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Check Status</div>
+        <div class="cmd">git status</div>
+        <div class="example">Shows changed or staged files</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Add Files to Staging</div>
+        <div class="cmd">git add .</div>
+        <div class="example">Adds all modified files</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Commit Changes</div>
+        <div class="cmd">git commit -m "message"</div>
+        <div class="example">git commit -m "fixed bug"</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">View Commit History</div>
+        <div class="cmd">git log</div>
+        <div class="example">Lists previous commits</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Create Branch</div>
+        <div class="cmd">git branch feature</div>
+        <div class="example">Creates branch named "feature"</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Switch Branch</div>
+        <div class="cmd">git checkout feature</div>
+        <div class="example">Switches to branch "feature"</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Create + Switch Branch</div>
+        <div class="cmd">git checkout -b dev</div>
+        <div class="example">Creates and switches to "dev"</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Merge Branch</div>
+        <div class="cmd">git merge feature</div>
+        <div class="example">Merges branch feature into current branch</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Push to Remote</div>
+        <div class="cmd">git push origin main</div>
+        <div class="example">Uploads commits to remote repository</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Pull Latest Changes</div>
+        <div class="cmd">git pull</div>
+        <div class="example">Gets updates from remote</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Stash changes</div>
+        <div class="cmd">git stash</div>
+        <div class="example">Temporarily saves changes without committing</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Apply Stash</div>
+        <div class="cmd">git stash pop</div>
+        <div class="example">Restores last stashed changes</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Undo Last Commit</div>
+        <div class="cmd">git reset --soft HEAD~1</div>
+        <div class="example">Uncommit but keep changes staged</div>
+    </div>
+
+    <div class="card">
+        <div class="cmd-title">Remove untracked files</div>
+        <div class="cmd">git clean -f</div>
+        <div class="example">Deletes files not in git</div>
+    </div>
+
+</div>
+
+</body>
+</html>
